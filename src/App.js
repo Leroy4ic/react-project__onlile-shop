@@ -1,14 +1,20 @@
 import React from "react";
-import './App.scss';
-import main from './components/Styles/main.scss';
-import Header from "./components/Header/Header";
+import './styles/app.scss';
+import Header from "./components/Header";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Header/>
+            <main>
+                <AppRouter />
+            </main>
+            <Footer />
+        </BrowserRouter>
+    );
 }
 
 export default App;
