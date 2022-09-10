@@ -7,14 +7,9 @@ const Home = () => {
     ]
 
     const [currentBanner, setCurrentBanner] = useState(0);
-    const [active, setActive] = useState();
 
     const handleSwitch = (bannerIndex) => {
-        setActive('');
         setCurrentBanner(bannerIndex);
-        if(currentBanner == bannerIndex){
-            setActive('active');
-        }
     };
 
     return (
