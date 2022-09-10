@@ -1,0 +1,63 @@
+.banner{
+  margin-bottom: 500px;
+  position: relative;
+  img{
+    width: 600px;
+    height: 495px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  h1{
+    width: 585px;
+    margin: 100px 0 45px 0;
+  }
+
+  p{
+    width: 385px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.02em;
+    margin-bottom: 52px;
+  }
+
+  .button{
+    margin: 0 0 126px 144px;
+  }
+
+  .switcher{
+    //background: aqua;
+    display: flex;
+    gap: 12px;
+    width: fit-content;
+    margin-left: 270px;
+
+    .rectangle{
+      width: 30px;
+      height: 4px;
+      background: #D1D1D1;
+      cursor: pointer;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .rectangle::after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      top: -8px;
+    }
+
+    .active{
+      background: black;
+    }
+
+
+  }
+}
