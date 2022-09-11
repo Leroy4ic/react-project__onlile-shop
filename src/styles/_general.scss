@@ -26,14 +26,15 @@ button {
     align-items: center;
 }
 
-.main-container{
+.container {
     max-width: 1110px;
     margin: 0 auto;
+    position: relative;
 }
 
-h1{
+h1 {
     font-weight: 500;
     font-size: 55px;
-    line-height: 110%;
+    line-height: 1.2;
     letter-spacing: 0.02em;
 }

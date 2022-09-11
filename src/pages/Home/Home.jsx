@@ -7,22 +7,27 @@ const Home = () => {
     ]
 
     const [currentBanner, setCurrentBanner] = useState(0);
-
     const handleSwitch = (bannerIndex) => {
         setCurrentBanner(bannerIndex);
     };
 
     return (
-        <div className='banner'>
-            <h1>Новые поступления в этом сезоне</h1>
-            <p>Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
-            <Link to="/shop" className="button">Открыть магазин</Link>
-            <div className='switcher'>
-                {banners.map((banner, bannerIndex) => (
-                    <div key={bannerIndex} className={`rectangle ${currentBanner == bannerIndex ? 'active' : ''}`} onClick={() => handleSwitch(bannerIndex)}></div>
-                ))}
+        <div className='banner flex'>
+            <div className="banner-left">
+                <h1 className="headline">Новые поступления в этом сезоне</h1>
+                <p className="label">Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
+                <Link to="/shop" className="button">Открыть магазин</Link>
+                <div className='switcher flex'>
+                    {banners.map((banner, bannerIndex) => (
+                        <div key={bannerIndex} className={`rectangle ${currentBanner === bannerIndex ? 'active' : ''}`} onClick={() => handleSwitch(bannerIndex)}></div>
+                    ))}
+                </div>
             </div>
-            <img src={banners[currentBanner]} alt='banner'></img>
+            <div className="banner-right">
+                <div className="image-wrapper">
+                    <img src={banners[currentBanner]} alt='banner'></img>
+                </div>
+            </div>
         </div>
     );
 };
