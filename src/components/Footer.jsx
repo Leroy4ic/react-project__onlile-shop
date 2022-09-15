@@ -9,8 +9,7 @@ import Twitter from "../images/icons/twitter.svg";
 
 const Footer = () => {
     return (
-        <div className='wrapper'>
-            <footer className='footer'>
+        <footer className='footer'>
                 <Link to='/' className='logo'>
                     <img src={Logo} alt="logo"/>
                 </Link>
@@ -45,7 +44,6 @@ const Footer = () => {
                 </div>
 
             </footer>
-        </div>
     );
 };
 
