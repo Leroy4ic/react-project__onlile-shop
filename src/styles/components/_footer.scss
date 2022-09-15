@@ -1,0 +1,74 @@
+//.wrapper{
+//  background: #F1EADC;
+//}
+.footer{
+  padding: 100px 0;
+  margin-bottom: 500px;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 25px;
+  position: relative;
+
+  &::after{
+    content: '';
+    background: #F1EADC;
+    width: 100vw;
+    height: 100%;
+    margin-left: -200px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .logo{
+    grid-column: 1 / 3;
+  }
+
+  .nav{
+    grid-column: 4 / 9;
+    grid-row: 1 / 2;
+  }
+
+  .phone{
+    justify-content: right;
+  }
+
+  img{
+    cursor: pointer;
+  }
+
+  .rights{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: 1 / 4;
+    grid-row: 4;
+  }
+
+  .catalog{
+    @extend .rights;
+    grid-column: 5 / 7;
+    margin-left: 35px;
+  }
+
+  .ftcontacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    grid-column: 11 / 13;
+    grid-row: 1 / 8;
+
+    :nth-child(2){
+      margin-top: -20px;
+    }
+
+    .ftsocial{
+      img{
+        margin-left: 12px;
+      }
+    }
+  }
+
+}
