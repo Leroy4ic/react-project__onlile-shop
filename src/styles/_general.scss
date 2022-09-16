@@ -25,6 +25,12 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .container {
     max-width: 1110px;
