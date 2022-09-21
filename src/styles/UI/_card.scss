@@ -1,0 +1,35 @@
+.cards {
+    margin-top: 65px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+
+
+    &__card {
+
+    }
+
+    &__image-wrapper {
+        margin-bottom: 24px;
+        max-width: 350px;
+        height: 478px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+    }
+
+    &__headline {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        color: rgba(153, 142, 120, 1);
+        font-size: 15px;
+    }
+}

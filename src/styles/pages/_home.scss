@@ -15,7 +15,7 @@
 
     &-left {
         .headline {
-            width: 585px;
+            max-width: 585px;
             margin-bottom: 45px;
         }
 
@@ -37,7 +37,7 @@
 
     &-right {
         .image-wrapper {
-            width: 410px;
+            max-width: 410px;
             height: 646px;
 
             img {

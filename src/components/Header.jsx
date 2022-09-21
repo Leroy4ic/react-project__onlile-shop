@@ -6,25 +6,23 @@ import Navbar from "./Navbar";
 
 const Header = () => {
     return (
-        <div className="container">
-            <header className="header flex">
-                <Link to='/' className='logo'>
-                    <img src={Logo} alt="logo"/>
+        <header className="header">
+            <div className="container flex">
+            <Link to='/' className='logo'>
+                <img src={Logo} alt="logo"/>
+            </Link>
+            <Navbar />
+            <div className='contacts flex'>
+                <a href='tel:+38099999999' className="phone flex">
+                    <Icon name="phone" color="#fff" size="32"/>
+                    +38099999999
+                </a>
+                <Link to="/cart">
+                    <Icon name="basket" color="#fff" size="32"/>
                 </Link>
-                <Navbar />
-
-                <div className='contacts flex'>
-                    <a href='tel:+38099999999' className="phone flex">
-                        <Icon name="phone" color="#fff" size="32"/>
-                        +38099999999
-                    </a>
-                    <Link to="/cart">
-                        <Icon name="basket" color="#fff" size="32"/>
-                    </Link>
-                </div>
-            </header>
-        </div>
-
+            </div>
+            </div>
+        </header>
     );
 };
 

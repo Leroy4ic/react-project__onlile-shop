@@ -3,7 +3,10 @@ import React from 'react';
 const Contacts = () => {
     return (
         <div>
-            Contacts
+            <div className="caption-wrapper">
+                <h1 className="caption">Contacts</h1>
+                <p>Главная - Contacts</p>
+            </div>
         </div>
     );
 };

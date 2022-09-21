@@ -6,12 +6,14 @@ import Contacts from "../pages/Contacts/Contacts";
 import Home from "../pages/Home/Home";
 import Cart from "../pages/Cart/Cart";
 import CompleteOrder from "../pages/CompleteOrder/CompleteOrder";
+import NotFound from "../pages/NotFound/NotFound";
 
 const AppRouter = () => {
     return (
         <Fragment>
             <Routes>
-                <Route path='*' element={<Navigate replace to="/" />} />
+                {/*<Route path='*' element={<Navigate replace to="/" />} />*/}
+                <Route path='*' element={<NotFound/>} />
 
                 <Route path="/" element={<Home/>}/>
                 <Route path="/shop" element={<Shop/>}/>

@@ -10,7 +10,7 @@ import Twitter from "../images/icons/twitter.svg";
 const Footer = () => {
     return (
         <footer className='footer'>
-            {/*<div className="container">*/}
+            <div className="container">
                 <Link to='/' className='logo'>
                     <img src={Logo} alt="logo"/>
                 </Link>
@@ -21,7 +21,7 @@ const Footer = () => {
                         +38099999999
                     </a>
                     <a href='mailto:example@gmail.com'>example@gmail.com</a>
-                    <div className='ftsocial'>
+                    <div className='footer__social'>
                         <img src={Instagram}/>
                         <img src={Facebook}/>
                         <img src={Twitter}/>
@@ -39,7 +39,7 @@ const Footer = () => {
                     <Link to='/'>Кардиганы</Link>
                     <Link to='/'>Толстовки</Link>
                 </div>
-            {/*</div>*/}
+            </div>
         </footer>
     );
 };

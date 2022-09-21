@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    padding: 0 5%;
+    //padding: 0 5%;
 }
 
 a {
@@ -43,4 +43,17 @@ h1 {
     font-size: 55px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.caption {
+    margin-bottom: 26px;
+
+    &-wrapper {
+        padding: 150px 0;
+    }
 }

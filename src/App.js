@@ -9,7 +9,9 @@ function App() {
         <>
             <Header/>
             <main>
-                <AppRouter />
+                <div className="container">
+                    <AppRouter />
+                </div>
             </main>
             <Footer />
         </>
