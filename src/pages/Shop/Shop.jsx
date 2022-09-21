@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Card from "../../components/UI/Card";
+import Caption from "../../components/UI/Caption";
 
 const Shop = () => {
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
@@ -11,10 +12,7 @@ const Shop = () => {
 
     return (
         <div className="shop">
-            <div className="caption-wrapper">
-                <h1 className="caption">Магазин</h1>
-                <p>Главная - Магазин</p>
-            </div>
+            <Caption caption="Магазин"/>
             <ul className="shop__list flex">
                 {categories.map(item => {
                     return (
