@@ -71,13 +71,13 @@ const Home = () => {
                     </div>
 
                     <div className="important-for-us">
-                        <img src={Speed} alt={'Speed'}/>
+                        <img src={Speed} alt='Speed'/>
                         <h3>Скорость</h3>
                         <p>Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти единиц продукции в наших собственных цехах</p>
                     </div>
 
                     <div className="important-for-us">
-                        <img src={Responsibility} alt={'Responsibility'}/>
+                        <img src={Responsibility} alt='Responsibility'/>
                         <h3>Ответственность</h3>
                         <p>Мы заботимся о людях и планете. Безотходное производство и комфортные условия труда - все это Womazing</p>
                     </div>
