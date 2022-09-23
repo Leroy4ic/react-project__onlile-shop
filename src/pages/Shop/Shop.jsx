@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Card from "../../components/UI/Card";
 import Caption from "../../components/UI/Caption";
+import {Link} from "react-router-dom";
 
 const Shop = () => {
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
@@ -29,8 +30,11 @@ const Shop = () => {
                 <Card />
             </div>
             <div className="pagination flex">
-                <p>1</p>
-                <p>2</p>
+                <Link to="/page1" className="pagination__number">1</Link>
+                <Link to="/page2" className="pagination__number">2</Link>
+                <Link to="/next">
+                    <Icon name="arrow" color="#000" size="18"/>
+                </Link>
             </div>
         </div>
     );
