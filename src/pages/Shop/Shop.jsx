@@ -7,7 +7,10 @@ import useCatalogData from "../../custom-hooks/useCatalogData";
 const Shop = () => {
 
     const coat = useCatalogData('coat');
-    console.log(coat);
+    console.log(coat.data);
+
+    const coatData = coat.data;
+    console.log(coatData);
 
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
     const [status, setStatus] = useState('all');
@@ -28,9 +31,9 @@ const Shop = () => {
             </ul>
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards flex">
-                {/*{coat.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
+                {coatData.map(item => {
+                    return <Card key={item.id} {...item}/>
+                })}
 
             </div>
             <div className="pagination flex">
