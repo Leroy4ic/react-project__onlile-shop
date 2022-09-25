@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Card from "../../components/UI/Card";
 import Caption from "../../components/UI/Caption";
 import {Link} from "react-router-dom";
+import Icon from "../../images/sprites/Icon";
 
 const Shop = () => {
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
