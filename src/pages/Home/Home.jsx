@@ -5,6 +5,9 @@ import Quality from "../../images/banner/quality 1.png";
 import Speed from "../../images/banner/speed 1.png";
 import Responsibility from "../../images/banner/responsibility 1.png";
 import DreamTeamCarousel from "../../components/DreamTeamCarousel";
+import Picture1 from "../../images/banner/dream-team1.png";
+import Picture2 from "../../images/banner/dream-team2.png";
+import Picture3 from "../../images/banner/dream-team3.png";
 
 
 const Home = () => {
@@ -90,7 +93,11 @@ const Home = () => {
                 <h2>Команда мечты Womazing</h2>
 
                 <div className="dream-team-block">
-                    <DreamTeamCarousel />
+                    <DreamTeamCarousel>
+                        <img src={Picture1} className={"dream-team-item d-t-item-1"} alt={"picture of team"}/>
+                        <img src={Picture2} className={"dream-team-item d-t-item-2"} alt={"picture of team"}/>
+                        <img src={Picture3} className={"dream-team-item d-t-item-2"} alt={"picture of team"}/>
+                    </DreamTeamCarousel>
                 </div>
             </div>
         </div>

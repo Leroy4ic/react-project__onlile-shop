@@ -1,18 +1,70 @@
-import React from 'react';
-import '../styles/components/DreamTeamCarousel.module.scss';
-import Picture1 from './../images/banner/dream-team1.png';
-import Picture2 from './../images/banner/dream-team2.png';
-import Picture3 from './../images/banner/dream-team3.png';
+import React, {Children, cloneElement, useEffect, useState} from 'react';
+import '../styles/components/DreamTeamCarousel.scss';
+import { FaChevronLeft, FaChevronRight} from "react-icons/fa";
+import ArrowLeft from "./../images/banner/arrowLeft.png"
+import ArrowRight from "./../images/banner/arrowRight.png";
 
-const DreamTeamCarousel = () => {
+
+const PICTURES_WIDTH = 730
+
+const DreamTeamCarousel = ({ children }) => {
+  const [pages, setPages] = useState([])
+  const [offset, setOffset] = useState(0)
+
+
+  const handleLeftArrowClick = () => {
+    console.log('handleLeftArrowClick');
+
+    setOffset((currentOffset) => {
+
+      const newOffset = currentOffset + PICTURES_WIDTH
+
+      console.log(newOffset)
+      return newOffset
+    })
+  }
+
+  const handleRightArrowClick = () => {
+    console.log('handleRightArrowClick');
+
+    setOffset((currentOffset) => {
+
+      const newOffset = currentOffset - PICTURES_WIDTH
+
+      console.log(newOffset)
+      return newOffset
+    })
+  }
+
+  useEffect(() => {
+    setPages(
+      Children.map(children, child => {
+        return cloneElement(child, {
+          style: {
+            height: '100%',
+            // minWidth: '100%',
+            // maxWidth: '100%',
+            minWidth: `${PICTURES_WIDTH}px`,
+            maxWidth: `${PICTURES_WIDTH}px`,
+          },
+        })
+      })
+    )
+  }, [])
+
   return (
-    <div className={"dream-team-carousel"}>
-      <div className={"dream-team-item d-t-item-1"}
-           style={{backgroundImage: `url(${Picture1}`}}></div>
-      <div className={"dream-team-item d-t-item-2"}
-           style={{backgroundImage: `url(${Picture2}`}}></div>
-      <div className={"dream-team-item d-t-item-2"}
-           style={{backgroundImage: `url(${Picture3}`}}></div>
+    <div className={"carousel-main-container"}>
+      <img src={ArrowLeft} className="arrow arrowLeft" onClick={handleLeftArrowClick}/>
+
+      <div className={"dream-team-window"}>
+        <div className={"dream-team-all-pictures"}
+        style={{
+          transform: `translateX(${offset})`
+        }}
+        >{pages}</div>
+      </div>
+
+      <img src={ArrowRight} className="arrow arrowRight" onClick={handleRightArrowClick}/>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.carousel-main-container {
+  width: 730px;
+  height: 490px;
+  display: flex;
+  align-items: center;
+}
+
+.dream-team-window {
+  width: 730px;
+  height: 490px;
+  //overflow: hidden;
+  position: relative;
+}
+
+.dream-team-all-pictures {
+  height: 100%;
+  display: flex;
+}
+
+.arrow {
+  cursor: pointer;
+  //margin: 0 25px;
+}
+
+.arrowLeft {
+  position: absolute;
+  margin-left: -65px;
+}
+
+.arrowRight {
+  //position: absolute;
+  margin-left: 35px;
+}
