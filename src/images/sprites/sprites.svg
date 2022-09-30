@@ -13,5 +13,8 @@
         <symbol id="icon-down" viewBox="0 0 32 32">
             <path d="M8 0V28M8 28L1 20.8108M8 28L15 20.8108" stroke="#6E9C9F"/>
         </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 40 40">
+            <path d="M0 12H31M31 12L20.186 1M31 12L20.186 23" stroke="black"/>
+        </symbol>
     </defs>
 </svg>

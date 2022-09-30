@@ -60,7 +60,6 @@ const Home = () => {
                     <Card />
                 </div>
                 <Link to="/shop" className="button ">Открыть магазин</Link>
-
             </div>
 
         {/*Что для нас важно*/}
