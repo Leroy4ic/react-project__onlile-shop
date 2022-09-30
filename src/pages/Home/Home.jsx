@@ -94,10 +94,18 @@ const Home = () => {
 
                 <div className="dream-team-block">
                     <DreamTeamCarousel>
-                        <img src={Picture1} className={"dream-team-item d-t-item-1"} alt={"picture of team"}/>
-                        <img src={Picture2} className={"dream-team-item d-t-item-2"} alt={"picture of team"}/>
-                        <img src={Picture3} className={"dream-team-item d-t-item-2"} alt={"picture of team"}/>
+                        <img src={Picture1} alt={"dream team"}/>
+                        <img src={Picture2} alt={"dream team"}/>
+                        <img src={Picture3} alt={"dream team"}/>
                     </DreamTeamCarousel>
+
+                    <div className="dream-team-text">
+                        <h3>Для каждой</h3>
+                        <p>Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.</p>
+                        <p>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
+                        <Link to="/about" className="link-more">Подробнее о бренде</Link>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React, {Children, cloneElement, useEffect, useState} from 'react';
 import '../styles/components/DreamTeamCarousel.scss';
-import { FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import ArrowLeft from "./../images/banner/arrowLeft.png"
 import ArrowRight from "./../images/banner/arrowRight.png";
 
@@ -13,26 +12,27 @@ const DreamTeamCarousel = ({ children }) => {
 
 
   const handleLeftArrowClick = () => {
-    console.log('handleLeftArrowClick');
+    // console.log('handleLeftArrowClick');
 
     setOffset((currentOffset) => {
-
       const newOffset = currentOffset + PICTURES_WIDTH
 
-      console.log(newOffset)
-      return newOffset
+      // console.log(newOffset)
+      return Math.min(newOffset, 0)
     })
   }
 
   const handleRightArrowClick = () => {
-    console.log('handleRightArrowClick');
+    // console.log('handleRightArrowClick');
 
     setOffset((currentOffset) => {
 
       const newOffset = currentOffset - PICTURES_WIDTH
 
-      console.log(newOffset)
-      return newOffset
+      const maxOffset = -(PICTURES_WIDTH * (pages.length - 1))
+
+      // console.log(newOffset, maxOffset)
+      return Math.max(newOffset, maxOffset)
     })
   }
 
@@ -54,17 +54,24 @@ const DreamTeamCarousel = ({ children }) => {
 
   return (
     <div className={"carousel-main-container"}>
-      <img src={ArrowLeft} className="arrow arrowLeft" onClick={handleLeftArrowClick}/>
+      <img src={ArrowLeft} alt={"arrow left"}
+           className="arrow arrowLeft"
+           onClick={handleLeftArrowClick}/>
 
       <div className={"dream-team-window"}>
+
         <div className={"dream-team-all-pictures"}
-        style={{
-          transform: `translateX(${offset})`
-        }}
-        >{pages}</div>
+        style={{transform: `translateX(${offset}px)`}}>
+
+          {pages}
+
+        </div>
+
       </div>
 
-      <img src={ArrowRight} className="arrow arrowRight" onClick={handleRightArrowClick}/>
+      <img src={ArrowRight} alt={"arrow right"}
+           className="arrow arrowRight"
+           onClick={handleRightArrowClick}/>
     </div>
   );
 };
