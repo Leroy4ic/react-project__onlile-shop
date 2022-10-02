@@ -117,4 +117,27 @@
             width: 305px;
         }
     }
+
+    .dream-team-block {
+        display: flex;
+        align-items: center;
+        //justify-content: space-around;
+
+        .dream-team-text {
+            margin-left: 65px;
+        }
+
+        p {
+            margin: 28px 0;
+        }
+
+        .link-more {
+            color: $main-color;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 140%;
+            letter-spacing: 0.02em;
+        }
+    }
 }
+
