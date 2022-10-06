@@ -1,39 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Card from "../../components/UI/Card";
 import Caption from "../../components/UI/Caption";
 import {Link} from "react-router-dom";
-
-import Icon from "../../images/sprites/Icon";
-
 import useCatalogData from "../../custom-hooks/useCatalogData";
 
-
 const Shop = () => {
+
+    const coat = useCatalogData('coat');
+    console.log(coat?.data);
+
+    const coatData = coat?.data;
+    console.log(coatData);
+
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
     const [status, setStatus] = useState('all');
 
     const hand = () => {
 
     }
-
-    // const coat = useCatalogData('coat');
-    // console.log(coat.data);
-    //
-    // const coatData = coat.data;
-    // console.log(coatData);
-    //
-
-    const clothes = useCatalogData('coat');
-    console.log(clothes)
-    let [temp, setTemp] = useState([]);
-
-    useEffect(() => {
-        if (clothes) {
-            console.log(temp)
-            //вот нижняя строчка все ломает, я не понимаю почему, но оно и не выводит
-            // setTemp(clothes);
-        }
-    }, [clothes]);
 
     return (
         <div className="shop">
@@ -47,7 +31,7 @@ const Shop = () => {
             </ul>
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards flex">
-                {temp.map(item => {
+                {coatData?.map(item => {
                     return <Card key={item.id} {...item}/>
                 })}
 
