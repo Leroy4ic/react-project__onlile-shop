@@ -12,7 +12,7 @@ const Shop = () => {
     const coatData = coat?.data;
     console.log(coatData);
 
-    const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толтовки'];
+    const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки'];
     const [status, setStatus] = useState('all');
 
     const hand = () => {
