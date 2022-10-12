@@ -1,0 +1,118 @@
+{
+  "cardigan": {
+    "category": "Кардиганы",
+    "data": [
+      {
+        "id": "c01",
+        "mainImage": "card-item.jpg",
+        "name": "2151asd51",
+        "price": 685
+      },
+      {
+        "id": "c02",
+        "mainImage": "card-item.jpg",
+        "name": "7894a5sd51 asd456",
+        "price": 693
+      },
+      {
+        "id": "c03",
+        "mainImage": "card-item.jpg",
+        "name": "asda546a1d",
+        "price": 595
+      },
+      {
+        "id": "c04",
+        "mainImage": "card-item.jpg",
+        "name": "45asdsa5d4as51",
+        "price": 785
+      }
+    ]
+  },
+  "coat": {
+    "category": "Пальто",
+    "data": [
+      {
+        "id": "p01",
+        "mainImage": "oversized-coat-wool-1.jpg",
+        "name": "Объемное пальто, шерсть",
+        "price": 9999
+      },
+      {
+        "id": "p02",
+        "mainImage": "handmade-wool-coat-1.jpg",
+        "name": "Пальто из шерсти ручной работы",
+        "price": 7999
+      },
+      {
+        "id": "p03",
+        "mainImage": "handmade-fitted-coat-1.jpg",
+        "name": "Приталенное пальто ручной работы",
+        "price": 7999
+      },
+      {
+        "id": "p04",
+        "mainImage": "classic-cotton-raincoat-1.jpg",
+        "name": "Классический плащ из хлопка",
+        "price": 3599
+      }
+    ]
+  },
+  "sweatshirt": {
+    "category": "Свитшоты",
+    "data": [
+      {
+        "id": "s01",
+        "mainImage": "card-item.jpg",
+        "name": "879as1d as5 15a",
+        "price": 685
+      },
+      {
+        "id": "s02",
+        "mainImage": "card-item.jpg",
+        "name": "8415sad1 sda",
+        "price": 693
+      },
+      {
+        "id": "s03",
+        "mainImage": "card-item.jpg",
+        "name": "785as1dass da",
+        "price": 595
+      },
+      {
+        "id": "s04",
+        "mainImage": "card-item.jpg",
+        "name": "456a1sda5s",
+        "price": 785
+      }
+    ]
+  },
+  "tolstovki": {
+    "category": "Толстовки",
+    "data": [
+      {
+        "id": "t01",
+        "mainImage": "card-item.jpg",
+        "name": "1asd312",
+        "price": 685
+      },
+      {
+        "id": "t02",
+        "mainImage": "card-item.jpg",
+        "name": "d4a5d4as5d",
+        "price": 693
+      },
+      {
+        "id": "t03",
+        "image": "card-item.jpg",
+        "name": "as4dasd as5d4 5as4d",
+        "price": 595
+      },
+      {
+        "id": "t04",
+        "mainImage": "card-item.jpg",
+        "name": "5as6ds45d 4ads5",
+        "price": 785
+      }
+    ]
+  }
+}
