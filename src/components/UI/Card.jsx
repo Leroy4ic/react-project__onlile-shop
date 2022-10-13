@@ -8,12 +8,10 @@ const Card = (props) => {
 
     console.log(mainImage);
 
-    const imgPath = '../../images/cards-img/';
-
     return (
         <div className="cards__card flex-column">
             <div className="cards__image-wrapper">
-                <img src={require( `../../images/cards-img/${mainImage}` )}/>
+                <img src={require( `../../images/cards-img/${mainImage}` ) || Item}/>
             </div>
             <h2 className="cards__headline">{name}</h2>
             <p className="cards__price">{price}</p>

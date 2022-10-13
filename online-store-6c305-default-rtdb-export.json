@@ -35,25 +35,39 @@
         "id": "p01",
         "mainImage": "oversized-coat-wool-1.jpg",
         "name": "Объемное пальто, шерсть",
-        "price": 9999
+        "price": 9999,
+        "color": {
+          "khaki": ["oversized-coat-wool-1.jpg", "oversized-coat-wool-2.jpg"]
+        }
       },
       {
         "id": "p02",
         "mainImage": "handmade-wool-coat-1.jpg",
         "name": "Пальто из шерсти ручной работы",
-        "price": 7999
+        "price": 7999,
+        "color": {
+          "grey": ["handmade-wool-coat-1.jpg", "handmade-wool-coat-2.jpg"]
+        }
       },
       {
         "id": "p03",
         "mainImage": "handmade-fitted-coat-1.jpg",
         "name": "Приталенное пальто ручной работы",
-        "price": 7999
+        "price": 7999,
+        "color": {
+          "ecru": ["handmade-fitted-coat-1.jpg", "handmade-fitted-coat-1.jpg"],
+          "brown": ["handmade-fitted-coat-3.jpg", "handmade-fitted-coat-4.jpg"]
+        }
       },
       {
         "id": "p04",
         "mainImage": "classic-cotton-raincoat-1.jpg",
         "name": "Классический плащ из хлопка",
-        "price": 3599
+        "price": 3599,
+        "color": {
+          "beige": ["classic-cotton-raincoat-1.jpg", "classic-cotton-raincoat-1.jpg"],
+          "dark-blue": ["classic-cotton-raincoat-3.jpg", "classic-cotton-raincoat-4.jpg"]
+        }
       }
     ]
   },
