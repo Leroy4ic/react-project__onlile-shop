@@ -1,0 +1,134 @@
+{
+  "womazing": {
+    "cardigan": {
+      "category": "Кардиганы",
+      "data": [
+        {
+          "id": "c01",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "2151asd51",
+          "price": 685
+        },
+        {
+          "id": "c02",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "7894a5sd51 asd456",
+          "price": 693
+        },
+        {
+          "id": "c03",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "asda546a1d",
+          "price": 595
+        },
+        {
+          "id": "c04",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "45asdsa5d4as51",
+          "price": 785
+        }
+      ]
+    },
+    "coat": {
+      "category": "Пальто",
+      "data": [
+        {
+          "id": "p01",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "Объемное пальто, шерсть",
+          "price": 9999,
+          "color": {
+            "khaki": ["oversized-coat-wool-1.jpg", "oversized-coat-wool-2.jpg"]
+          }
+        },
+        {
+          "id": "p02",
+          "mainImage": "handmade-wool-coat-1.jpg",
+          "name": "Пальто из шерсти ручной работы",
+          "price": 7999,
+          "color": {
+            "grey": ["handmade-wool-coat-1.jpg", "handmade-wool-coat-2.jpg"]
+          }
+        },
+        {
+          "id": "p03",
+          "mainImage": "handmade-fitted-coat-1.jpg",
+          "name": "Приталенное пальто ручной работы",
+          "price": 7999,
+          "color": {
+            "ecru": ["handmade-fitted-coat-1.jpg", "handmade-fitted-coat-1.jpg"],
+            "brown": ["handmade-fitted-coat-3.jpg", "handmade-fitted-coat-4.jpg"]
+          }
+        },
+        {
+          "id": "p04",
+          "mainImage": "classic-cotton-raincoat-1.jpg",
+          "name": "Классический плащ из хлопка",
+          "price": 3599,
+          "color": {
+            "beige": ["classic-cotton-raincoat-1.jpg", "classic-cotton-raincoat-1.jpg"],
+            "dark-blue": ["classic-cotton-raincoat-3.jpg", "classic-cotton-raincoat-4.jpg"]
+          }
+        }
+      ]
+    },
+    "sweatshirt": {
+      "category": "Свитшоты",
+      "data": [
+        {
+          "id": "s01",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "879as1d as5 15a",
+          "price": 685
+        },
+        {
+          "id": "s02",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "8415sad1 sda",
+          "price": 693
+        },
+        {
+          "id": "s03",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "785as1dass da",
+          "price": 595
+        },
+        {
+          "id": "s04",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "456a1sda5s",
+          "price": 785
+        }
+      ]
+    },
+    "tolstovki": {
+      "category": "Толстовки",
+      "data": [
+        {
+          "id": "t01",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "1asd312",
+          "price": 685
+        },
+        {
+          "id": "t02",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "d4a5d4as5d",
+          "price": 693
+        },
+        {
+          "id": "t03",
+          "image": "oversized-coat-wool-1.jpg",
+          "name": "as4dasd as5d4 5as4d",
+          "price": 595
+        },
+        {
+          "id": "t04",
+          "mainImage": "oversized-coat-wool-1.jpg",
+          "name": "5as6ds45d 4ads5",
+          "price": 785
+        }
+      ]
+    }
+  }
+}
