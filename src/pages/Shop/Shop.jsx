@@ -3,6 +3,7 @@ import Card from "../../components/UI/Card";
 import Caption from "../../components/UI/Caption";
 import {Link} from "react-router-dom";
 import useCatalogData from "../../custom-hooks/useCatalogData";
+import {useSelector} from "react-redux";
 
 const Shop = () => {
 
@@ -19,6 +20,12 @@ const Shop = () => {
     //
     // const tolstovki = useCatalogData('tolstovki');
     // const tolstovkiData = tolstovki?.data;
+
+
+    const value = useSelector( state => state.firebaseData.jsonObj);
+    console.log(value);
+
+
 
     const womazing = useCatalogData('womazing');
 
