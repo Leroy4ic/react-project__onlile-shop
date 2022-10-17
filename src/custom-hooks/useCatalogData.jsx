@@ -3,7 +3,7 @@ import firebase from "../utils/firebase-config";
 
 const useCatalogData = (fieldName) => {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState('');
 
     useEffect(() => {
         firebase

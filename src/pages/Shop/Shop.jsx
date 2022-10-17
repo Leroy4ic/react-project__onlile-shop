@@ -8,6 +8,8 @@ const Shop = () => {
 
     // const coat = useCatalogData('coat');
     // const coatData = coat?.data;
+    // console.log(coat);
+    // console.log(coat.data);
     //
     // const cardigan = useCatalogData('cardigan');
     // const cardiganData = cardigan?.data;
@@ -20,29 +22,20 @@ const Shop = () => {
 
     const womazing = useCatalogData('womazing');
 
-    const [dataBase, setDataBase] = useState('');
-
-    useEffect( () => {
-        setDataBase(womazing);
-    }, [womazing]);
-
-
-
     console.log(womazing);
+
+    const dataBase = [womazing.cardigan, womazing.coat, womazing.sweatshirt, womazing.tolstovki];
+
+    console.log(dataBase);
 
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки'];
     const [status, setStatus] = useState('all');
 
-    // const allData = [coatData, cardiganData, sweatshirtData, tolstovkiData];
 
     const [catalog, setCatalog] = useState(null);
 
     const hand = (e) => {
-        // if(e.target.innerText === 'Все') {
-        //     // console.log('hello');
-        //     setCatalog(allData);
-        //     console.log(catalog);
-        // };
+
     }
 
     return (
@@ -58,11 +51,35 @@ const Shop = () => {
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards flex">
 
-                {Object.keys(dataBase)?.forEach(data => {
-                    data?.map(item => {
-                        return <Card key={item.id} {...item}/>
-                    })
+                {/*КОД ДОЛЖЕН РАБОТАТЬ, НО ВИДИМО ПРОБЛЕМА В ВЛОЖЕННОСТИ ЦИКЛОВ*/}
+
+                {/*{dataBase?.map(elem => {*/}
+                {/*    console.log(elem);*/}
+                {/*    elem?.data.map(item => {*/}
+                {/*        return <Card key={item.id} {...item}/>*/}
+                {/*    })*/}
+                {/*})}*/}
+
+                {dataBase[0]?.data.map(item => {
+                    return <Card key={item.id} {...item}/>
                 })}
+
+                {dataBase[1]?.data.map(item => {
+                    return <Card key={item.id} {...item}/>
+                })}
+
+                {dataBase[2]?.data.map(item => {
+                    return <Card key={item.id} {...item}/>
+                })}
+
+                {/*ПОСЛЕДНИЙ ПУНКТ НЕ ВЫВОДИТСЯ, ОШИБКА, НЕ ПОЙМУ ИЗ-ЗА ЧЕГО*/}
+
+                {/*{dataBase[3]?.data.map(item => {*/}
+                {/*    return <Card key={item.id} {...item}/>*/}
+                {/*})}*/}
+
+
+                {/*СТАРЫЙ КОД*/}
 
                 {/*{coatData?.map(item => {*/}
                 {/*    return <Card key={item.id} {...item}/>*/}
