@@ -79,11 +79,9 @@ const Shop = () => {
                     return <Card key={item.id} {...item}/>
                 })}
 
-                {/*ПОСЛЕДНИЙ ПУНКТ НЕ ВЫВОДИТСЯ, ОШИБКА, НЕ ПОЙМУ ИЗ-ЗА ЧЕГО*/}
-
-                {/*{dataBase[3]?.data.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
+                {dataBase[3]?.data.map(item => {
+                    return <Card key={item.id} {...item}/>
+                })}
 
 
                 {/*СТАРЫЙ КОД*/}
