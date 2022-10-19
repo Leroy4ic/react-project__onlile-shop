@@ -29,11 +29,11 @@ const Shop = () => {
 
     const womazing = useCatalogData('womazing');
 
-    console.log(womazing);
+    // console.log(womazing);
 
     const dataBase = [womazing.cardigan, womazing.coat, womazing.sweatshirt, womazing.tolstovki];
 
-    console.log(dataBase);
+    // console.log(dataBase);
 
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки'];
     const [status, setStatus] = useState('all');
@@ -81,9 +81,9 @@ const Shop = () => {
 
                 {/*ПОСЛЕДНИЙ ПУНКТ НЕ ВЫВОДИТСЯ, ОШИБКА, НЕ ПОЙМУ ИЗ-ЗА ЧЕГО*/}
 
-                {/*{dataBase[3]?.data.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
+                {dataBase[3]?.data.map(item => {
+                    return <Card key={item.id} {...item}/>
+                })}
 
 
                 {/*СТАРЫЙ КОД*/}

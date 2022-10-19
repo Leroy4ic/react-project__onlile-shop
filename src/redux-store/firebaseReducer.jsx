@@ -1,5 +1,5 @@
 const defaultState = {
-    jsonObj: "hello",
+    jsonObj: "hello41241231",
 }
 
 export const firebaseReducer = (state = defaultState, action) => {
