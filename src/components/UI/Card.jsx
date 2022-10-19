@@ -38,9 +38,6 @@ const Card = (props) => {
         });
 
 
-
-    // const imgRef = ref(storage, mainImage);
-
     // console.log(mainImage);
     // console.log(imgRef);
 
