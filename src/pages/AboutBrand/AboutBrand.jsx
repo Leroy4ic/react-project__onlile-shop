@@ -1,9 +1,9 @@
 import React from 'react';
-import About1 from '../../images/banner/about1.png';
-import About2 from '../../images/banner/about2.png';
+import About1 from '../../images/aboutBrand/about1.png';
+import About2 from '../../images/aboutBrand/about2.png';
 import {Link} from "react-router-dom";
 
-const About = () => {
+const AboutBrand = () => {
     return (
         <div>
             <div className="caption-wrapper">
@@ -42,4 +42,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AboutBrand;

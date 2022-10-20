@@ -35,7 +35,7 @@ const Footer = () => {
                 </div>
                 <div className='catalog'>
                     <Link to='/'>Пальто</Link>
-                    <Link to='/'>Свитшоны</Link>
+                    <Link to='/'>Свитшоты</Link>
                     <Link to='/'>Кардиганы</Link>
                     <Link to='/'>Толстовки</Link>
                 </div>

@@ -1,7 +1,7 @@
 import React, {Children, cloneElement, useEffect, useState} from 'react';
 import '../styles/components/DreamTeamCarousel.scss';
-import ArrowLeft from "./../images/banner/arrowLeft.png"
-import ArrowRight from "./../images/banner/arrowRight.png";
+import ArrowLeft from "../images/dreamTeamCarousel/arrowLeft.png"
+import ArrowRight from "../images/dreamTeamCarousel/arrowRight.png";
 
 
 const PICTURES_WIDTH = 730

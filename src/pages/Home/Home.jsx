@@ -5,9 +5,9 @@ import Quality from "../../images/banner/quality 1.png";
 import Speed from "../../images/banner/speed 1.png";
 import Responsibility from "../../images/banner/responsibility 1.png";
 import DreamTeamCarousel from "../../components/DreamTeamCarousel";
-import Picture1 from "../../images/banner/dream-team1.png";
-import Picture2 from "../../images/banner/dream-team2.png";
-import Picture3 from "../../images/banner/dream-team3.png";
+import Picture1 from "../../images/dreamTeamCarousel/dream-team1.png";
+import Picture2 from "../../images/dreamTeamCarousel/dream-team2.png";
+import Picture3 from "../../images/dreamTeamCarousel/dream-team3.png";
 
 
 const Home = () => {
