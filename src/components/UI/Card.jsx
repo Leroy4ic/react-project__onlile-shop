@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from '../../images/cards-img/classic-cotton-raincoat-1.jpg';
 import {Link} from "react-router-dom";
+import ArrowOnAProduct from '../../images/cards-img/arrowOnAProduct.svg';
 
 
 // const Card = (props) => {
@@ -24,19 +25,29 @@ import {Link} from "react-router-dom";
 const Card = (props) => {
 
   const {name, mainImage, id, price} = props;
-
   console.log(mainImage);
+
+  let wholeCard = document.querySelector(".cards");
+  console.log(wholeCard);
+  // let cardImg = wholeCard.querySelector(".imgLink");
+  // console.log(cardImg);
+  let wholeCar = wholeCard.querySelector(".imgLink");
+  console.log(wholeCar);
 
   return (
     <div className="cards__card flex-column">
 
-      <Link className="cards__image-wrapper" to={`/product/${id}`}>
+      <Link className="cards__image-wrapper imgLink" to={`/product/${id}`}>
 
         <img src={mainImage ? require(`../../images/cards-img/${mainImage}`) : Item} alt={"product"}/>
-        <h2 className="cards__headline">{name}</h2>
-        <p className="cards__price">{price}</p>
+
+        <span className={"mask"}>
+          <img src={ArrowOnAProduct} alt="Arrow On A Product"/>
+        </span>
 
       </Link>
+      <h4 className="cards__headline">{name}</h4>
+      <p className="cards__price">{price}</p>
 
     </div>
   );

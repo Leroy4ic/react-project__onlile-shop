@@ -4,14 +4,13 @@
     justify-content: flex-start;
     gap: 29px;
 
-
-
     &__card {
         width: 341px;
     }
 
+
     &__image-wrapper {
-        margin-bottom: 24px;
+        //margin-bottom: 24px;
         max-width: 350px;
         height: 478px;
 
@@ -21,13 +20,43 @@
             vertical-align: middle;
             object-fit: cover;
         }
+
     }
 
-    &__headline {
-        font-weight: 500;
-        font-size: 20px;
-        margin-bottom: 10px;
+
+    .imgLink {
+        display: block;
+        position: relative;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(110, 156, 159, 0.57);
+            opacity: 0;
+            color: #fff;
+            font-size: 40px;
+            transition: opacity .4s linear;
+
+            img {
+                width: 20%;
+                height: 10%;
+            }
+        }
+
+        span:hover {
+            opacity: 1;
+        }
+
     }
+
 
     &__price {
         color: rgba(153, 142, 120, 1);
