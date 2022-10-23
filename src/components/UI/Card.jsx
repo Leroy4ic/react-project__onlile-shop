@@ -27,13 +27,6 @@ const Card = (props) => {
   const {name, mainImage, id, price} = props;
   console.log(mainImage);
 
-  let wholeCard = document.querySelector(".cards");
-  console.log(wholeCard);
-  // let cardImg = wholeCard.querySelector(".imgLink");
-  // console.log(cardImg);
-  let wholeCar = wholeCard.querySelector(".imgLink");
-  console.log(wholeCar);
-
   return (
     <div className="cards__card flex-column">
 
