@@ -40,15 +40,19 @@ const Card = (props) => {
       // Handle any errors
     });
 
+    const newTo = {
+      pathname: `/product/${id}`,
+      name:`Hello`,
+    };
 
   // console.log(mainImage);
   // console.log(imgRef);
   return (
     <div className="cards__card flex-column">
 
-      <Link className="cards__image-wrapper imgLink" to={`/product/${id}`}>
+      <Link params={{ testvalue: "hello" }} className="cards__image-wrapper imgLink" to={newTo}>
 
-        <img src={mainImage ? require(`../../images/cards-img/${mainImage}`) : Item} alt={"product"}/>
+        <img src={mainImage ? imgUrl : Item}/>
 
         <span className={"mask"}>
           <img src={ArrowOnAProduct} alt="Arrow On A Product"/>
