@@ -40,17 +40,18 @@ const Card = (props) => {
       // Handle any errors
     });
 
-    const newTo = {
-      pathname: `/product/${id}`,
-      name:`Hello`,
-    };
+    const [data, setData] = useState({
+        name: `${name}`,
+        mainImage: `${mainImage}`,
+        imgUrl: `${imgUrl}`,
+    });
 
   // console.log(mainImage);
   // console.log(imgRef);
   return (
     <div className="cards__card flex-column">
 
-      <Link params={{ testvalue: "hello" }} className="cards__image-wrapper imgLink" to={newTo}>
+      <Link state={{ data: data }} className="cards__image-wrapper imgLink" to={`/product/${id}`}>
 
         <img src={mainImage ? imgUrl : Item}/>
 

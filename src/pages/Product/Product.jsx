@@ -8,11 +8,17 @@ import {getDownloadURL, getStorage, ref} from "firebase/storage";
 
 const Product = (props) => {
 
+    const location = useLocation();
+    const data = location.state?.data;
+    console.log(data);
+    console.log(data.mainImage);
+    console.log(props);
+
+  // console.log(props.location.name);
   const {name, mainImage, id, price} = props;
-  // console.log(this.props.location.name);
 
   const storage = getStorage();
-  const imgRef = ref(storage, `${mainImage}`);
+  const imgRef = ref(storage, `${data.mainImage}`);
 
   const [imgUrl, setImgUrl] = useState('');
 
@@ -43,12 +49,12 @@ const Product = (props) => {
   return (
     <div>
       {/*<Caption caption = "{props.}"/>*/}
-      <Caption caption = {name}/>
+      <Caption caption = {data.name}/>
       Product
 
       <div className="cards__card flex-column">
 
-        <img src={mainImage ? imgUrl : Item}/>
+        <img src={data.mainImage ? imgUrl : Item}/>
         <p className="cards__price">{price}</p>
 
       </div>
