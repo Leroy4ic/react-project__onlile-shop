@@ -10,7 +10,7 @@ import { getStorage, ref, getDownloadURL } from "firebase/storage";
 const Card = (props) => {
 
   const {name, mainImage, id, price} = props;
-  console.log(mainImage);
+  // console.log(mainImage);
 
   const storage = getStorage();
   const imgRef = ref(storage, `${mainImage}`);
@@ -41,9 +41,11 @@ const Card = (props) => {
     });
 
     const [data, setData] = useState({
-        name: `${name}`,
-        mainImage: `${mainImage}`,
-        imgUrl: `${imgUrl}`,
+      name: `${name}`,
+      mainImage: `${mainImage}`,
+      imgUrl: `${imgUrl}`,
+      price: `${price}`,
+
     });
 
   // console.log(mainImage);
@@ -53,7 +55,7 @@ const Card = (props) => {
 
       <Link state={{ data: data }} className="cards__image-wrapper imgLink" to={`/product/${id}`}>
 
-        <img src={mainImage ? imgUrl : Item}/>
+        <img src={mainImage ? imgUrl : Item} alt="product"/>
 
         <span className={"mask"}>
           <img src={ArrowOnAProduct} alt="Arrow On A Product"/>
@@ -61,7 +63,7 @@ const Card = (props) => {
 
       </Link>
       <h4 className="cards__headline">{name}</h4>
-      <p className="cards__price">{price}</p>
+      <p className="cards__price">${price}</p>
 
     </div>
   );

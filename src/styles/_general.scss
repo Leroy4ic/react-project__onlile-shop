@@ -18,6 +18,7 @@ button {
     border: none;
     background-color: transparent;
     font-size: 17px;
+
 }
 
 .flex {
@@ -81,19 +82,27 @@ ul li {
     margin-bottom: 26px;
 
     &-wrapper {
-        padding: 150px 0;
+        padding: 150px 0 26px;
     }
 }
 
 .bread-crumbs {
-    a {
-        &.active {
-            color: #909090;
-        }
+    display: flex;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
 
-        &:hover {
-            text-decoration: underline;
-            color: #6E9C9F;
-        }
+    a:hover {
+        text-decoration: underline;
+        color: #6E9C9F;
+    }
+
+    span {
+        margin: 0 13px 0 13px;
+    }
+
+    p {
+        color: #919191;
     }
 }

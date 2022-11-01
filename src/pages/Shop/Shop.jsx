@@ -48,6 +48,9 @@ const Shop = () => {
     return (
         <div className="shop">
             <Caption caption="Магазин"/>
+          <div className="bread-crumbs">
+            <Link to="/">Главная</Link> <span>—</span>  <p to="/shop">Магазин</p>
+          </div>
             <ul className="shop__list flex">
                 {categories.map(item => {
                     return (

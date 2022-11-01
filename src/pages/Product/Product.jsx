@@ -1,21 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import Caption from '../../components/UI/Caption';
-import useCatalogData from "../../custom-hooks/useCatalogData";
 import {Link, useLocation, useParams} from "react-router-dom";
-import axios from "axios";
 import Item from "../../images/cards-img/classic-cotton-raincoat-1.jpg";
 import {getDownloadURL, getStorage, ref} from "firebase/storage";
 
-const Product = (props) => {
+const Product = () => {
 
     const location = useLocation();
     const data = location.state?.data;
     console.log(data);
     console.log(data.mainImage);
-    console.log(props);
 
-  // console.log(props.location.name);
-  const {name, mainImage, id, price} = props;
 
   const storage = getStorage();
   const imgRef = ref(storage, `${data.mainImage}`);
@@ -48,14 +43,25 @@ const Product = (props) => {
 
   return (
     <div>
-      {/*<Caption caption = "{props.}"/>*/}
       <Caption caption = {data.name}/>
-      Product
+      <div className="bread-crumbs">
+        <Link to="/">Главная</Link> <span>—</span> <Link to="/shop">Магазин</Link> <span>—</span> <p>{data.name}</p>
+      </div>
+      <div className="product">
 
-      <div className="cards__card flex-column">
+        <img src={data.mainImage ? imgUrl : Item} alt="product"/>
 
-        <img src={data.mainImage ? imgUrl : Item}/>
-        <p className="cards__price">{price}</p>
+        <div className="optionsOfProduct">
+          <h2 className="productPrice">{data.price}</h2>
+          <h4>Выберите размер</h4>
+
+          <h4>Выберите цвет</h4>
+          <div className="colors">
+            <button className="colorBtn">1</button>
+            <button className="colorBtn">2</button>
+            <button className="colorBtn">3</button>
+          </div>
+        </div>
 
       </div>
     </div>
