@@ -6,10 +6,11 @@ import {getDownloadURL, getStorage, ref} from "firebase/storage";
 
 const Product = () => {
 
-    const location = useLocation();
-    const data = location.state?.data;
-    console.log(data);
-    console.log(data.mainImage);
+  const location = useLocation();
+  const data = location.state?.data;
+  console.log(data);
+  console.log(data.mainImage);
+  console.log("description: " + data.description)
 
 
   const storage = getStorage();
@@ -64,6 +65,7 @@ const Product = () => {
         </div>
 
       </div>
+      <div className="description">{data.description}</div>
     </div>
   );
 };
