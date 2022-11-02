@@ -173,7 +173,7 @@
         },
         {
           "id": "t03",
-          "image": "flowy-satin-sheen-shirt-1.jpeg",
+          "mainImage": "flowy-satin-sheen-shirt-1.jpeg",
           "name": "Струящаяся рубашка с атласным блеском",
           "price": 999,
           "color": {
