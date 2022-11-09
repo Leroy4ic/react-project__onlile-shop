@@ -61,7 +61,7 @@ const Card = (props) => {
 
       </Link>
       <h4 className="cards__headline">{name}</h4>
-      <p className="cards__price">{price}</p>
+      <p className="cards__price">{price} грн</p>
 
     </div>
   );

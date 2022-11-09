@@ -4,8 +4,15 @@
     justify-content: flex-start;
     gap: 29px;
 
+
     &__card {
         width: 341px;
+        margin-bottom: 30px;
+    }
+
+    &__headline {
+        text-align: center;
+        height: 56px;
     }
 
 
