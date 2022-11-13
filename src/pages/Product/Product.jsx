@@ -19,25 +19,14 @@ const Product = () => {
 
   getDownloadURL(imgRef)
     .then((url) => {
-      // `url` is the download URL for 'images/stars.jpg'
 
       setImgUrl(url);
 
-      // // This can be downloaded directly:
-      // const xhr = new XMLHttpRequest();
-      // xhr.responseType = 'blob';
-      // xhr.onload = (event) => {
-      //     const blob = xhr.response;
-      // };
-      // xhr.open('GET', url);
-      // xhr.send();
-
-      // // Or inserted into an <img> element
-      // const img = document.getElementById('myimg');
-      // img.setAttribute('src', url);
     })
     .catch((error) => {
+
       // Handle any errors
+
     });
 
 
@@ -63,7 +52,11 @@ const Product = () => {
           </div>
         </div>
 
+
       </div>
+
+        <p>{data.description}</p>
+
     </div>
   );
 };
