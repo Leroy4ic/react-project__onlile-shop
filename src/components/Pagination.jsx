@@ -54,16 +54,16 @@ import Card from "./UI/Card";
 
 
 export default function Pagination(props){
-    const { data } = props;
+    const data = props.data;
     console.log(data);
 
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage = 6;
 
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = data?.slice(itemOffset, endOffset);
-    console.log(currentItems);
+    // console.log(currentItems);
     const pageCount = Math.ceil(data.length / itemsPerPage);
 
     const handlePageClick = (event) => {
@@ -78,7 +78,10 @@ export default function Pagination(props){
         <>
             {currentItems !== "" &&
                  currentItems.map(item => {
-                    return <Card key={item.id} {...item}/>
+                      // if(item.category.includes(filter)){
+                      //     return <Card key={item.id} {...item}/>
+                      // }
+                     return <Card key={item.id} {...item}/>
                 })
             }
             <ReactPaginate
