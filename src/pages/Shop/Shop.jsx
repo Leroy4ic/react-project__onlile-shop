@@ -1,46 +1,57 @@
 import React, {useEffect, useState} from 'react';
 import Card from "../../components/UI/Card";
 import Caption from "../../components/UI/Caption";
+import Pagination from "../../components/Pagination";
 import {Link} from "react-router-dom";
 import useCatalogData from "../../custom-hooks/useCatalogData";
 import {useSelector} from "react-redux";
 
 const Shop = () => {
 
-    // const coat = useCatalogData('coat');
-    // const coatData = coat?.data;
-    // console.log(coat);
-    // console.log(coat.data);
-    //
-    // const cardigan = useCatalogData('cardigan');
-    // const cardiganData = cardigan?.data;
-    //
-    // const sweatshirt = useCatalogData('sweatshirt');
-    // const sweatshirtData = sweatshirt?.data;
-    //
-    // const tolstovki = useCatalogData('tolstovki');
-    // const tolstovkiData = tolstovki?.data;
-
-
-    const value = useSelector( state => state.firebaseData.jsonObj);
-    console.log(value);
-
-
+    const value = useSelector(state => state.firebaseData.jsonObj);
+    // console.log(value);
 
     const womazing = useCatalogData('womazing');
-
     console.log(womazing);
 
-    const dataBase = [womazing.cardigan, womazing.coat, womazing.sweatshirt, womazing.tolstovki];
+    // const dataBase = [womazing.cardigan, womazing.coat, womazing.sweatshirt, womazing.tolstovki];
+    // console.log(dataBase);
 
-    console.log(dataBase);
-
-    const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки'];
-    const [status, setStatus] = useState('all');
+    const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Рубашки'];
 
 
-    const [catalog, setCatalog] = useState(null);
 
+
+
+    const [checked, setChecked] = useState("");
+    const [paginationData, setPaginationData] = useState([]);
+
+
+    console.log(paginationData);
+
+    const handleChange = event => {
+
+        setPaginationData([]);
+        setChecked(event.target.value);
+        const tempData = womazing.filter(item => {
+
+            if(item.category.includes(event.target.value)) {
+                return [ item, ...paginationData ];
+            }
+
+        })
+
+        console.log(tempData);
+        setPaginationData(tempData);
+
+    }
+    console.log(paginationData);
+    console.log(paginationData[0]);
+
+    // const [status, setStatus] = useState('all');
+    //
+    // const [catalog, setCatalog] = useState(null);
+    //
     const hand = (e) => {
 
     }
@@ -51,68 +62,51 @@ const Shop = () => {
           <div className="bread-crumbs">
             <Link to="/">Главная</Link> <span>—</span>  <p to="/shop">Магазин</p>
           </div>
-            <ul className="shop__list flex">
-                {categories.map(item => {
-                    return (
-                        <li key={item} className="shop__item" onClick={hand}>{item}</li>
-                    )
-                })}
-            </ul>
+
+            <form className="shop__filter">
+
+                <input type="radio" id="filter1" name="filter-options" value="" checked={checked === ""} onChange={handleChange}/>
+                {/*<label htmlFor="filter1">Все</label>*/}
+
+                <input type="radio" id="filter2" name="filter-options" value="Пальто" checked={checked === "Пальто"} onChange={handleChange}/>
+                {/*<label htmlFor="filter2">Пальто</label>*/}
+
+                <input type="radio" id="filter3" name="filter-options" value="Свитшоты" checked={checked === "Свитшоты"} onChange={handleChange}/>
+                {/*<label htmlFor="filter3">Свитшоты</label>*/}
+
+                <input type="radio" id="filter4" name="filter-options" value="Кардиганы" checked={checked === "Кардиганы"} onChange={handleChange}/>
+                {/*<label htmlFor="filter4">Кардиганы</label>*/}
+
+                <input type="radio" id="filter5" name="filter-options" value="Рубашки" checked={checked === "Рубашки"} onChange={handleChange}/>
+                {/*<label htmlFor="filter5">Рубашки</label>*/}
+
+            </form>
+
+            {/*<ul className="shop__list flex">*/}
+            {/*    {categories.map(item => {*/}
+            {/*        return (*/}
+            {/*            <li key={item} className="shop__item" onClick={hand}>{item}</li>*/}
+            {/*        )*/}
+            {/*    })}*/}
+            {/*</ul>*/}
+
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards flex">
 
-                {/*КОД ДОЛЖЕН РАБОТАТЬ, НО ВИДИМО ПРОБЛЕМА В ВЛОЖЕННОСТИ ЦИКЛОВ*/}
-
-                {/*{dataBase?.map(elem => {*/}
-                {/*    console.log(elem);*/}
-                {/*    elem?.data.map(item => {*/}
-                {/*        return <Card key={item.id} {...item}/>*/}
-                {/*    })*/}
-                {/*})}*/}
-
-                {dataBase[0]?.data.map(item => {
-                    return <Card key={item.id} {...item}/>
-                })}
-
-                {dataBase[1]?.data.map(item => {
-                    return <Card key={item.id} {...item}/>
-                })}
-
-                {dataBase[2]?.data.map(item => {
-                    return <Card key={item.id} {...item}/>
-                })}
-
-                {dataBase[3]?.data.map(item => {
-                    return <Card key={item.id} {...item}/>
-                })}
-
-
-                {/*СТАРЫЙ КОД*/}
-
-                {/*{coatData?.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
-
-                {/*{cardiganData?.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
-
-                {/*{sweatshirtData?.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
-
-                {/*{tolstovkiData?.map(item => {*/}
-                {/*    return <Card key={item.id} {...item}/>*/}
-                {/*})}*/}
+                <Pagination data = { paginationData[0] ?  paginationData : womazing}/>
 
             </div>
-            <div className="pagination flex">
-                <Link to="/page1" className="pagination__number">1</Link>
-                <Link to="/page2" className="pagination__number">2</Link>
-                {/*<Link to="/next">*/}
-                {/*    <Icon name="arrow" color="#000" size="18"/>*/}
-                {/*</Link>*/}
-            </div>
+
+
+
+
+            {/*<div className="pagination flex">*/}
+            {/*    <Link to="/page1" className="pagination__number">1</Link>*/}
+            {/*    <Link to="/page2" className="pagination__number">2</Link>*/}
+            {/*    /!*<Link to="/next">*!/*/}
+            {/*    /!*    <Icon name="arrow" color="#000" size="18"/>*!/*/}
+            {/*    /!*</Link>*!/*/}
+            {/*</div>*/}
         </div>
     );
 };
