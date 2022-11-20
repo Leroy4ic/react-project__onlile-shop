@@ -3,13 +3,18 @@
   margin-top: 102px;
 
   img {
-    width: 536px;
-    height: 729px;
+    width: 50%;
+    max-width: 536px;
+    //height: 729px;
   }
 
   .optionsOfProduct {
     margin-left: 74px;
     margin-top: 117px;
+  }
+
+  &__description {
+    padding-top: 70px;
   }
 }
 
@@ -18,6 +23,5 @@
   height: 41px;
   border: 2px solid gray;
   border-radius: 50%;
-  cursor: pointer;
   margin-right: 14px;
 }

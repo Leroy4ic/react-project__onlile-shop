@@ -36,26 +36,38 @@ const Product = () => {
       <div className="bread-crumbs">
         <Link to="/">Главная</Link> <span>—</span> <Link to="/shop">Магазин</Link> <span>—</span> <p>{data.name}</p>
       </div>
-      <div className="product">
 
+      <div className="product">
         <img src={data.mainImage ? imgUrl : Item} alt="product"/>
 
         <div className="optionsOfProduct">
           <h2 className="productPrice">{data.price}</h2>
+
           <h4>Выберите размер</h4>
+          <ul>
+            <li></li>
+          </ul>
 
           <h4>Выберите цвет</h4>
-          <div className="colors">
-            <button className="colorBtn">1</button>
-            <button className="colorBtn">2</button>
-            <button className="colorBtn">3</button>
+          <ul>
+            <li></li>
+          </ul>
+          {/*<div className="colors">*/}
+          {/*  <button className="colorBtn">1</button>*/}
+          {/*  <button className="colorBtn">2</button>*/}
+          {/*  <button className="colorBtn">3</button>*/}
+          {/*</div>*/}
+          <div className="flex">
+            <input type="number" min='1' defaultValue='1'/>
+            <button>Добавить в корзину</button>
           </div>
+
         </div>
 
 
       </div>
 
-        <p>{data.description}</p>
+        <p className="product__description">{data.description}</p>
 
     </div>
   );
