@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Caption from '../../components/UI/Caption';
-import {Link, useLocation, useParams} from "react-router-dom";
+import {NavLink, useLocation, useParams} from "react-router-dom";
 import Item from "../../images/cards-img/classic-cotton-raincoat-1.jpg";
 import {getDownloadURL, getStorage, ref} from "firebase/storage";
 
@@ -34,10 +34,18 @@ const Product = () => {
     <div>
       <Caption caption = {data.name}/>
       <div className="bread-crumbs">
-        <Link to="/">Главная</Link> <span>—</span> <Link to="/shop">Магазин</Link> <span>—</span> <p>{data.name}</p>
+        <NavLink to="/">Главная</NavLink>
+        <span>—</span>
+        <NavLink to="/shop">Магазин</NavLink>
+        <span>—</span>
+        <NavLink to="/shop"
+                 // onClick={}
+          >{data.category}</NavLink>
+        <span>—</span>
+        <p>{data.name}</p>
       </div>
 
-      <div className="product">
+      <div className="product flex">
         <img src={data.mainImage ? imgUrl : Item} alt="product"/>
 
         <div className="optionsOfProduct">

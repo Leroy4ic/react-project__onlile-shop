@@ -9,7 +9,7 @@ import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const Card = (props) => {
 
-  const {name, mainImage, id, price, description} = props;
+  const {name, mainImage, id, price, description, category} = props;
   // console.log(mainImage);
 
   const storage = getStorage();
@@ -30,10 +30,11 @@ const Card = (props) => {
     });
 
     const [data, setData] = useState({
-        name: `${name}`,
-        mainImage: `${mainImage}`,
-        imgUrl: `${imgUrl}`,
-        description: `${description}`,
+      name: `${name}`,
+      mainImage: `${mainImage}`,
+      imgUrl: `${imgUrl}`,
+      description: `${description}`,
+      category: `${category}`,
     });
 
   // console.log(mainImage);

@@ -1,5 +1,4 @@
 .product {
-  display: flex;
   margin-top: 102px;
 
   img {
@@ -9,8 +8,8 @@
   }
 
   .optionsOfProduct {
-    margin-left: 74px;
-    margin-top: 117px;
+    padding-left: 74px;
+    //padding-top: 117px;
   }
 
   &__description {
