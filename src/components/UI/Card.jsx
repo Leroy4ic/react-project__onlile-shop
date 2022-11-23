@@ -9,7 +9,7 @@ import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const Card = (props) => {
 
-  const {name, mainImage, id, price, description, category} = props;
+  const {name, mainImage, id, price, description, category, size, color} = props;
   // console.log(mainImage);
 
   const storage = getStorage();
@@ -35,6 +35,9 @@ const Card = (props) => {
       imgUrl: `${imgUrl}`,
       description: `${description}`,
       category: `${category}`,
+      price: `${price}`,
+      size: `${size}`,
+      color: `${color}`,
     });
 
   // console.log(mainImage);

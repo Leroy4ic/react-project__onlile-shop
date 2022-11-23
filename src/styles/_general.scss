@@ -15,10 +15,15 @@ a {
 }
 
 button {
+    height: 68px;
     border: none;
     background-color: transparent;
     font-size: 17px;
     cursor: pointer;
+    font-weight: 400;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
 }
 
 .flex {
@@ -103,6 +108,6 @@ ul li {
     }
 
     p {
-        color: #919191;
+        color: $light-gray;
     }
 }
