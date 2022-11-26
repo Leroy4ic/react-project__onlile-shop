@@ -20,12 +20,16 @@ const Shop = () => {
     const categories = ['Все', 'Пальто', 'Свитшоты', 'Кардиганы', 'Рубашки'];
 
 
+    const [test, setTest] = useState('');
 
 
 
     const [checked, setChecked] = useState("");
-    const [paginationData, setPaginationData] = useState([]);
+    const [paginationData, setPaginationData] = useState('');
 
+    useEffect(() => {
+        setPaginationData(womazing);
+    }, [womazing]);
 
     console.log(paginationData);
 
@@ -46,7 +50,6 @@ const Shop = () => {
 
     }
     console.log(paginationData);
-    console.log(paginationData[0]);
 
     // const [status, setStatus] = useState('all');
     //
@@ -93,7 +96,7 @@ const Shop = () => {
             <p>Показано: 9 из 12 товаров</p>
             <div className="cards flex">
 
-                <Pagination data = { paginationData[0] ?  paginationData : womazing}/>
+                <Pagination data = { paginationData }/>
 
             </div>
 
