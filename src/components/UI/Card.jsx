@@ -37,7 +37,7 @@ const Card = (props) => {
       category: `${category}`,
       price: `${price}`,
       size: `${size}`,
-      color: `${color}`,
+      color: color,
     });
 
   // console.log(mainImage);

@@ -7,16 +7,59 @@ import Card from "../../components/UI/Card";
 
 const Product = () => {
 
-    const location = useLocation();
-    const data = location.state?.data;
-    console.log(data);
-    console.log(data.mainImage);
-  console.log(data.price);
-  const colors = data.color;
-  for (let color in colors) {
-    console.log(color)
+  const location = useLocation();
+  const data = location.state?.data;
+  console.log(data);
+  // console.log(data.price);
+
+  const colorsCodesObj = {
+    "ecru": "#f2e1cd",
+    "khaki": "#4a601b",
+    "orange": "#ffa500",
+    "coral-red": "#e68070",
+    "black": "#000000",
+    "green": "#008000",
+    "light-purple": "#b695c0",
+    "grey": "#808080",
+    "brown": "#3b2904",
+    "beige": "#f5f5dc",
+    "dark-blue": "#00008b",
+    "light-brown": "#C4A484",
+    "white": "#FFFFFF",
+    "pink": "#F81894",
+    "red": "#FF0000",
+    "fuchsia": "#BF026D",
+  };
+
+  const colorsNamesFromObj = Object.keys(colorsCodesObj);
+  console.log(colorsNamesFromObj);
+
+  const colorsOfOurProduct = Object.keys(data.color);
+  console.log(colorsOfOurProduct);
+
+  let colorsObj = [];
+
+  for (let color of colorsOfOurProduct) {
+    colorTheCircle(colorsNamesFromObj, color);
   }
 
+  function colorTheCircle(colorsNamesFromObj, color) {
+    colorsNamesFromObj.forEach(nameKey => {
+      if (color === nameKey) {
+        // console.log(`${nameKey} : ${colorsCodesObj[nameKey]}`);
+        colorsObj[nameKey] = colorsCodesObj[nameKey];
+      }
+    });
+  }
+
+  console.log(colorsObj);
+
+  let colorsNames = Object.keys(colorsObj);
+
+  //onClick for <li> with color:
+  function chooseColor() {
+
+  }
 
 
   const storage = getStorage();
@@ -31,9 +74,7 @@ const Product = () => {
 
     })
     .catch((error) => {
-
       // Handle any errors
-
     });
 
 
@@ -57,11 +98,11 @@ const Product = () => {
         <div className="product__info flex">
           <img src={data.mainImage ? imgUrl : Item} alt={data.name}/>
 
-          <div className="product__options">
+          <div className="product__allOptions">
             <h2 className="product__price">{data.price} грн</h2>
 
             <h4>Размер:</h4>
-            <ul className="product__sizes flex">
+            <ul className="product__options flex">
               {/*{data.size ?*/}
               {/*  <>*/}
               {/*    {data.size.map((size) => (*/}
@@ -69,33 +110,24 @@ const Product = () => {
               {/*    ))}*/}
               {/*  </>*/}
               {/*  : */}
-              <li className="product__sizes__universal size">Универсальный размер</li>
+              <li className="product__options__universal size">Универсальный размер</li>
             </ul>
             {/*}*/}
 
-            {/*{data.color ?*/}
-            {/*  <>*/}
             <h4>Цвет:</h4>
-            <ul>
-                {/*  {data.color.map((color) => (*/}
-                {/*    <li className="product__size">{color}</li>*/}
-                {/*  ))}*/}
+            <ul className="product__options flex">
 
-                {/*: */}
-              <li className="product__colors__value color">Один цвет</li>
+              {
+                colorsNames.map(name => (
+                  <li style={{backgroundColor: colorsObj[name]}} title={name} className="product__options-colorBtn"
+                      // onClick={chooseColor()}
+                  />
+                ))
+              }
 
-              {/*{*/}
-              {/*  for (colorValue in {data.color}) {*/}
-              {/*  <li className="product__size">{colorValue}</li>*/}
-              {/*}*/}
-              {/*}*/}
             </ul>
-              {/*</> : '' }*/}
-            {/*<div className="colors">*/}
-            {/*  <button className="colorBtn">1</button>*/}
-            {/*  <button className="colorBtn">2</button>*/}
-            {/*  <button className="colorBtn">3</button>*/}
-            {/*</div>*/}
+
+            {/*<p className="product__colors__value color">Один цвет</p>*/}
 
             <div className="product__form flex">
               <input className="product__form__input" type="number" min='1' defaultValue='1'/>
@@ -113,8 +145,8 @@ const Product = () => {
 
       <h2 className="relatedProducts">Связанные товары</h2>
       <div className="flex relatedProducts__cards">
-        <Card />
-        <Card />
+        <Card/>
+        <Card/>
       </div>
 
     </div>
